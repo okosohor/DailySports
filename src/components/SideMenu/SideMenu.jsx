@@ -10,10 +10,10 @@ export const SideMenu = ({isOpen, setIsOpen}) => {
 
   useEffect(() => {
     if(isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflowY = 'hidden';
 
       return () => {
-        document.body.style.overflow = 'unset';
+        document.body.style.overflowY = 'unset';
       };
     }
   }, [isOpen]);
