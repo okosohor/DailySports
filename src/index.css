@@ -1,0 +1,15 @@
+@import './utils/fonts/Inter/fonts.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  max-width: 100%;
+  overflow-x:hidden;
+  margin: 0px;
+  padding: 0px;
+}

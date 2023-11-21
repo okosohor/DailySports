@@ -1,0 +1,46 @@
+@import './vars.scss';
+
+@mixin onMobile {
+  @media (max-width: 1023px){
+      @content;
+  }
+}
+
+// @mixin onTablet {
+//   @media (min-width: 745px) and (max-width: 1023px){
+//       @content;
+//   }
+// }
+
+@mixin onDesktop {
+  @media (min-width: 1024px){
+      @content;
+  }
+}
+
+@mixin smallBoldText {
+  color: $black-color;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 18px;
+}
+
+@mixin titleText {
+  color: $black-color;
+  font-family: "Inter";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+@mixin gameCardMobile {
+  color: $light-gray-color;
+  font-family: 'Inter';
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 24px;
+}

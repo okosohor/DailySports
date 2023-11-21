@@ -1,0 +1,125 @@
+@import '../../utils//mixins.scss';
+@import '../../utils//vars.scss';
+
+.game-card {
+  @include onMobile {
+    display: none;
+  }
+  display: flex;
+  padding: 14px 0;
+  background-color: #fff;
+  margin-bottom: 4px;
+  border-radius: 12px;
+  justify-content: center;
+  max-height: 56px;
+  position: relative;
+
+  &__teams {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__counts {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 16px;
+    min-width: 51px;
+  }
+
+  &__title {
+    position: absolute;
+    &--title-1 {
+      right: 61%;
+      text-align: end;
+    }
+
+    &--title-2 {
+      left: 61%;
+    }
+  }
+
+  &__count {
+    @include gameCardMobile;
+    color: $black-color;
+
+    &--none {
+      color: $light-gray-color;
+    }
+
+    &--orange {
+      color: $orange-color;
+    }
+  }
+
+  &__additional-count {
+    @include gameCardMobile;
+    color: $main-gray-color;
+    font-weight: 400;
+    font-size: 14px;
+
+  }
+
+  &__image {
+    height: 28px;
+    width: 28px;
+    margin: 0 8px;
+  }
+
+  &__time {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    color: $main-gray-color;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+
+    &--orange {
+      color: $orange-color;
+      display: inline-block;
+    }
+
+    &--bold {
+      text-transform: uppercase;
+      font-weight: normal;
+      font-weight: 700;
+    }
+
+    &--small {
+      left: 60px;
+    }
+  }
+
+  &__forecast {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px 10px 6px 8px;
+    transition: all 0.3s;
+    border-radius: 40px;
+
+    &:hover {
+      background-color: $light-blue-color;
+    }
+
+    &-text {
+      @include smallBoldText;
+      font-weight: 700px;
+      color: $blue-color;
+    }
+
+    &-image {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}

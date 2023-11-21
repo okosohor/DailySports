@@ -1,0 +1,125 @@
+@import '../../utils//mixins.scss';
+@import '../../utils//vars.scss';
+
+.game-card-mobile {
+  border-radius: 12px;
+  background-color: #fff;
+  margin-bottom: 12px;
+  position: relative;
+
+  
+
+  &__header {
+    padding: 8px 16px;
+    border-bottom: 1px solid $light-gray-color;
+  }
+
+  &__time {
+    color: $main-gray-color;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+
+    &-live {
+      display: inline-block;
+      color: $orange-color;
+      font-family:'Inter';
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+
+      &--bold {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__forecast {
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    display: flex;
+    color: $blue-color;
+    font-family: 'Inter';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+
+    &__text {
+      display: inline-block;
+    }
+
+    &__image {
+      height: 16px;
+      width: 16px;
+      margin-right: 2px;
+    }
+  }
+
+  &__content {
+    padding: 12px 20px 16px 16px;
+
+  }
+
+  &__teams {
+
+  }
+
+  &__team {
+
+    &-info {
+      
+      display: flex;
+      align-items: center;
+    }
+
+    &-description {
+      
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    &-image {
+      height: 24px;
+      width: 24px;
+      margin-right: 8px;
+    }
+
+    &-title {
+      
+    }
+
+    &-addititional-count {
+      display: inline-block;
+      @include gameCardMobile;
+      color: $main-gray-color;
+      font-weight: 400;
+
+    }
+
+    &-count {
+      @include gameCardMobile;
+      color: $black-color;
+      display: inline-block;
+
+      &--orange {
+        color: $orange-color;
+      }
+
+      &-wrapper {
+        display: flex;
+      }
+
+      &--none {
+        color: $light-gray-color;
+      }
+    }
+  }
+}

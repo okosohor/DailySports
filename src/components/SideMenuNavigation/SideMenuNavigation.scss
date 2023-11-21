@@ -1,0 +1,30 @@
+@import '../../utils/vars.scss';
+
+.side-menu-navigation {
+  &__item {
+    padding: 12px 13px 12px 32px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: space-between;
+
+    &:hover {
+      background-color: $background-color;
+      color: $blue-color;
+
+      .element-menu-navigation__image {
+        filter: invert(51%) sepia(97%) saturate(7486%) hue-rotate(218deg) brightness(111%) contrast(109%);
+      }
+    }
+  }
+
+  &__text {
+
+  }
+
+  &__image {
+    height: 16px;
+    width: 16px;
+    transition: filter 0.3s;
+  }
+}

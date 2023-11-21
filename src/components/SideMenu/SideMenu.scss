@@ -1,0 +1,57 @@
+@import '../../utils/mixins.scss';
+
+.side-menu {
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  position: absolute;
+  transition: all 0.5s;
+  height: 100vh;
+
+  @include smallBoldText;
+  
+
+  &--is-close {
+    transform: translateX(-100%);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 12px 0px 28px;
+    margin-bottom: 32px;
+  }
+
+  &__logo{
+    height: 24px;
+    width: 142px;
+    margin-right: 82px;
+
+  }
+
+  &__close{
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+  }
+
+  &__background {
+    background-color: black;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    opacity: 70%;
+    visibility: visible;
+    transition: all 0.5s;
+  
+    &--is-close {
+      opacity: 0%;
+      visibility: hidden;
+    }
+  }
+}

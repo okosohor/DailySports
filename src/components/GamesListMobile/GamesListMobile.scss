@@ -1,0 +1,36 @@
+@import '../../utils//mixins.scss';
+@import '../../utils//vars.scss';
+
+.games-list-mobile {
+  @include onDesktop {
+    display: none;
+  }
+  display: flex;
+  padding: 0 12px;
+  flex-direction: column;
+  margin-bottom: 52px;
+
+  &__button {
+    align-items: center;
+    color: $black-color;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 18px;
+    display: inline-flex;
+    gap: 10px;
+    margin-top: 26px;
+    width: max-content;
+    margin: 0 auto;
+    padding: 8px 12px 8px 20px;
+    border-radius: 20px;
+    border: 3px solid $blue-color;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

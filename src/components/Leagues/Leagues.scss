@@ -1,0 +1,75 @@
+@import '../../utils//mixins.scss';
+@import '../../utils//vars.scss';
+
+.leagues {
+  @include onDesktop {
+    width: 264px;
+    margin-right: 24px;
+  }
+  &__title {
+    @include titleText;
+    margin: 0 8px;
+
+
+    &-block {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 16px;
+      justify-content: center;
+
+      @include onDesktop {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &__list {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 16px 20px;
+  }
+
+  &__image {
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+  }
+
+  &__text {
+    display: inline-block;
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    padding: 11px 44px;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 3px solid $main-blue-color;
+    background: $main-blue-color;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 18px;
+    transition: all 0.3s;
+    
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

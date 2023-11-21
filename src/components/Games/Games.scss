@@ -1,0 +1,123 @@
+@import '../../utils/mixins.scss';
+@import '../../utils/vars.scss';
+
+
+.games {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    @include onDesktop {
+      margin-left: 0px;
+      flex-direction: row;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__image {
+    height: 16px;
+    width: 16px;
+    margin-top: 4px;
+  }
+  
+  &__title {
+    @include titleText;
+    margin: 0 8px;
+
+    &-block {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 16px;
+      justify-content: center;
+
+      @include onDesktop {
+        margin-bottom: 0;
+        margin-right: 40px;
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    &-list {
+      display: flex;
+      
+    align-items: center;
+    }
+
+    @include onDesktop {
+      flex-direction: row-reverse
+    }
+
+    &-text {
+      @include smallBoldText;
+      display: inline-block;
+    color: $blue-color;
+    cursor: pointer;
+    margin-right: 20px;
+    line-height: normal;
+    transition: all 0.3s;
+
+    @include onDesktop {
+      margin-right: 24px;
+
+      &:first-child {
+        margin-right: 48px;
+      }
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    &:last-child {
+      margin-right: 61px;
+    }
+
+    &:hover {
+      color: $black-color;
+    }
+
+    &--is-open {
+      position: relative;
+      color: $black-color;
+      &::after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        bottom: -4px; 
+        left: 0;
+        position: absolute;
+        background-color: $blue-color;
+      }
+    }
+    }
+  }
+
+  &__calendar {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    @include onDesktop {
+      margin-right: 41px;
+    }
+
+    &-image {
+      margin-right: 11px;
+    }
+
+    &-text {
+      @include smallBoldText;
+      color: $blue-color;
+      
+    }
+  }
+}

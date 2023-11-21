@@ -1,0 +1,62 @@
+@import '../../utils/mixins.scss';
+@import '../../utils/vars.scss';
+
+.header {
+  // @include onDesktop {
+  //   padding: 0 50px;
+  // };
+
+  @include smallBoldText;
+
+  &__container {
+    display: flex;
+    padding: 12px 19px 12px 12px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: $container-width;
+
+    @include onDesktop {
+      padding: 27px 19px 12px 0px;
+    }
+  }
+
+  &__logo {
+    width: 142px;
+    height: 24px;
+
+    @include onDesktop {
+      width: 165px;
+      height: 28px;
+    }
+  }
+
+  &__menu-button {
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__navigation {
+    // @include onTablet {
+    //   display: none;
+    // }
+  
+    @include onMobile {
+      display: none;
+    }
+  }
+
+  &__language {
+    display: flex;
+    cursor: pointer;
+
+    &-image {
+      margin-right: 9px;
+    }
+
+    &-text {
+      line-height: 24px;
+    }
+  }
+}

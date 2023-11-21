@@ -1,0 +1,11 @@
+@import '../../utils//mixins.scss';
+@import '../../utils//vars.scss';
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+
+  @include onDesktop {
+    flex-direction: row-reverse;
+  }
+}

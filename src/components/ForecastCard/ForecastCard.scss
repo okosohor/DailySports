@@ -1,0 +1,107 @@
+@import '../../utils/mixins.scss';
+@import '../../utils/vars.scss';
+
+.forecast-card {
+  position: relative;
+  border-radius: 12px;
+  background-color: #fff;
+  width: max-content;
+  width: 360px;
+  margin-bottom: 12px;
+  justify-content: space-between;
+
+  
+
+  &__background { 
+    margin-bottom: 16px;
+    position: relative;
+  
+    border-radius: 12px 12px 0px 0px;
+  background-image: url('../../images/ForecastBG.png');
+  padding: 31px 37px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  display: flex;
+
+  @include onDesktop {
+    padding: 34px 40px;
+  }
+  }
+
+  &__vs-image {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+
+  &__image {
+    z-index: 2;
+
+    &:first-child {
+      margin-right: 127px;
+
+      @include onDesktop {
+        margin-right: 136px;
+      }
+    }
+  }
+
+  &__text {
+    padding: 16px 20px 20px;
+
+    @include onDesktop {
+      padding-bottom: 44px;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 4px;
+    color: $main-gray-color;
+    font-family: 'Inter';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+
+    &--bold-blue {
+      font-weight: 900;
+      color: $blue-color;
+    }
+
+    &--light-gray {
+      color: $light-gray-color;
+    }
+  }
+
+  &__description {
+    margin-bottom: 20px; 
+
+    @include onDesktop {
+      margin-bottom: 44px;
+    }
+  }
+
+  &__popular {
+    color: $black-color;
+    font-family: 'Inter';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 16px;
+    text-transform: uppercase;
+    background-color: $yellow-color;
+    border: 3px solid $orange-color;
+    border-radius: 12px;
+    width: max-content;
+    padding: 1px 8px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+      }
+}
