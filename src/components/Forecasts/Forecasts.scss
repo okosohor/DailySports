@@ -33,7 +33,6 @@
   &__title {
     @include titleText;
     margin: 0 8px;
-    
     white-space: nowrap;
 
     &-block {
@@ -49,19 +48,15 @@
 
   &__navigation {
     display: flex;
-
-    
   }
 
   &__text {
     @include smallBoldText;
-    color: $blue-color;
-    cursor: pointer;
     margin-right: 20px;
     line-height: normal;
+    color: $blue-color;
     transition: all 0.3s;
-
-
+    cursor: pointer;
 
     &:last-child {
       margin-right: 0px;
@@ -74,6 +69,7 @@
     &--is-open {
       position: relative;
       color: $black-color;
+
       &::after {
         content: '';
         width: 100%;
@@ -100,19 +96,17 @@
   }
 
   &__button {
+    @include smallBoldText;
     display: inline-flex;
     gap: 10px;
-    border-radius: 20px;
-    border: 3px solid $blue-color;
     width: max-content;
     margin: 0 auto;
     padding: 7px 12px 7px 20px;
+    line-height: 24px;
+    border-radius: 20px;
+    border: 3px solid $blue-color;
     transition: all 0.3s;
     cursor: pointer;
-
-    @include smallBoldText;
-    
-    line-height: 24px;
 
     &:hover {
       transform: scale(1.1);

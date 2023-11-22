@@ -1,17 +1,16 @@
 @import '../../utils/mixins.scss';
 
 .side-menu {
+  @include smallBoldText;
+  position: absolute;
   z-index: 4;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
-  position: absolute;
-  transition: all 0.5s;
   height: 100vh;
+  background-color: #fff;
+  transition: all 0.5s;
 
-  @include smallBoldText;
   
-
   &--is-close {
     transform: translateX(-100%);
   }
@@ -20,8 +19,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 12px 0px 28px;
     margin-bottom: 32px;
+    padding: 16px 12px 0px 28px;
   }
 
   &__logo{
@@ -38,20 +37,20 @@
   }
 
   &__background {
-    background-color: black;
+    position: absolute;
     top: 0px;
     left: 0px;
     z-index: 3;
     height: 100vh;
     width: 100%;
-    position: absolute;
-    opacity: 70%;
+    background-color: black;
     visibility: visible;
+    opacity: 70%;
     transition: all 0.5s;
   
     &--is-close {
-      opacity: 0%;
       visibility: hidden;
+      opacity: 0%;
     }
   }
 }

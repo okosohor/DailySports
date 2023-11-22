@@ -6,6 +6,7 @@
     width: 264px;
     margin-right: 24px;
   }
+
   &__title {
     @include titleText;
     margin: 0 8px;
@@ -15,7 +16,6 @@
       display: flex;
       justify-content: center;
       margin-bottom: 16px;
-      justify-content: center;
 
       @include onDesktop {
         margin-bottom: 25px;
@@ -24,9 +24,9 @@
   }
 
   &__list {
+    padding: 16px 20px;
     background-color: #fff;
     border-radius: 12px;
-    padding: 16px 20px;
   }
 
   &__image {
@@ -38,9 +38,9 @@
   &__text {
     display: inline-block;
     width: 180px;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   &__item {
@@ -53,20 +53,20 @@
   }
 
   &__button {
-    cursor: pointer;
     padding: 11px 44px;
-    color: #fff;
     display: block;
     margin: 0 auto;
-    border-radius: 20px;
-    border: 3px solid $main-blue-color;
-    background: $main-blue-color;
     font-family: 'Inter';
     font-size: 14px;
     font-style: normal;
     font-weight: 900;
     line-height: 18px;
+    color: #fff;
+    background: $main-blue-color;
+    border: 3px solid $main-blue-color;
+    border-radius: 20px;
     transition: all 0.3s;
+    cursor: pointer;
     
     &:hover {
       transform: scale(1.1);

@@ -2,19 +2,15 @@
 @import '../../utils/vars.scss';
 
 .header {
-  // @include onDesktop {
-  //   padding: 0 50px;
-  // };
-
   @include smallBoldText;
 
   &__container {
     display: flex;
-    padding: 12px 19px 12px 12px;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
     max-width: $container-width;
+    margin: 0 auto;
+    padding: 12px 19px 12px 12px;
 
     @include onDesktop {
       padding: 27px 19px 12px 0px;
@@ -38,10 +34,6 @@
   }
 
   &__navigation {
-    // @include onTablet {
-    //   display: none;
-    // }
-  
     @include onMobile {
       display: none;
     }

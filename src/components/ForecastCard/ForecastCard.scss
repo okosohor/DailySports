@@ -3,26 +3,22 @@
 
 .forecast-card {
   position: relative;
-  border-radius: 12px;
-  background-color: #fff;
-  width: max-content;
-  width: 360px;
-  margin-bottom: 12px;
   justify-content: space-between;
-
-  
+  margin-bottom: 12px;
+  width: 360px;
+  background-color: #fff;
+  border-radius: 12px;
 
   &__background { 
-    margin-bottom: 16px;
     position: relative;
-  
+    display: flex;
+    margin-bottom: 16px;
+    padding: 31px 37px;
     border-radius: 12px 12px 0px 0px;
-  background-image: url('../../images/ForecastBG.png');
-  padding: 31px 37px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size:cover;
-  display: flex;
+    background-image: url('../../images/ForecastBG.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
 
   @include onDesktop {
     padding: 34px 40px;
@@ -60,12 +56,12 @@
   &__title {
     display: inline-block;
     margin-bottom: 4px;
-    color: $main-gray-color;
     font-family: 'Inter';
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 16px;
+    color: $main-gray-color;
 
     &--bold-blue {
       font-weight: 900;
@@ -86,22 +82,22 @@
   }
 
   &__popular {
-    color: $black-color;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: max-content;
+    padding: 1px 8px;
     font-family: 'Inter';
     font-size: 12px;
     font-style: normal;
     font-weight: 900;
     line-height: 16px;
     text-transform: uppercase;
+    color: $black-color;
     background-color: $yellow-color;
     border: 3px solid $orange-color;
     border-radius: 12px;
-    width: max-content;
-    padding: 1px 8px;
-    position: absolute;
-    top: 0px;
-    left: 50%;
-
     transform: translate(-50%, -50%);
+
       }
 }
